@@ -1,0 +1,8 @@
+<div class="container">
+    <app-search (search)="onSearch($event)"></app-search>
+    <div class="user-grid">
+        @for (user of (filteredUsers$ | async); track $index) {
+            <app-user-card [user]="user"></app-user-card>
+        }
+    </div>
+</div>
